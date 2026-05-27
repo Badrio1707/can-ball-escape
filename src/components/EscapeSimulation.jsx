@@ -46,9 +46,6 @@ export default function EscapeSimulation() {
       ball.x = center.x;
       ball.y = center.y;
 
-      ball.vx *= 1.05;
-      ball.vy *= 1.05;
-
       const colors = ["#00ffff", "#ff00ff", "#00ff00", "#ffff00", "#ff5500"];
 
       ball.color = colors[Math.floor(Math.random() * colors.length)];
@@ -168,7 +165,7 @@ export default function EscapeSimulation() {
         // SPEED NORMALIZATION
         const speed = Math.sqrt(ball.vx * ball.vx + ball.vy * ball.vy);
 
-        const targetSpeed = 5 + level * 0.15;
+        const targetSpeed = 5;
 
         ball.vx = (ball.vx / speed) * targetSpeed;
         ball.vy = (ball.vy / speed) * targetSpeed;
